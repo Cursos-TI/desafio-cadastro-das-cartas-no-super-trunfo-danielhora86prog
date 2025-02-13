@@ -6,20 +6,20 @@ int main(){
     float Pib;
     int turisticos;
 
-    printf(char [50]"Digite a População: \n");
-    scanf(char [50]"%s", &População);
+    printf("Digite a População: \n");
+    scanf("%s", &População);
 
-    printf(char [50]"Digite a Area da Cidade: \n");
-    scanf(char [20]"xf", &Área);
+    printf("Digite a Area da Cidade: \n");
+    scanf("xf", &Área);
 
-    printf(char [50]"Digite o PIB da cidade: \n");
-    scanf(char [50]"%f", &Pib);
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &Pib);
 
-    printf(char [50] "Quantos pontos Turisticos: \n");
-    scanf(char [20]"xd", &turisticos);
+    printf( "Quantos pontos Turisticos: \n");
+    scanf("xd", &turisticos);
 
-    printf(char [70]"População da cidade: %d - Área da cidade: %f", População, Área);
-    printf(char [60]"PIB da Cidade: %f - Pontos Turisticos: %d", Pib, turisticos);
+    printf("População da cidade: %d - Área da cidade: %f", População, Área);
+    printf("PIB da Cidade: %f - Pontos Turisticos: %d", Pib, turisticos);
 
     return 0;
 }
