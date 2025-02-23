@@ -3,22 +3,23 @@
 
 int main() {
     char estado1[50], estado2[50]; // nome do estado
-    int cod1, cod2; // código da cidade
+    int carta1, carta2; // código da cidade
     char nome1[50], nome2[50]; // nome da cidade
     long unsigned int populacao1, populacao2; // população da cidade
     float area1, area2; // área da cidade
     float pib1, pib2; // PIB da cidade
-    int turisticos1, turisticos2; // quantidade de pontos turísticos
+    int turisticos1, turisticos2; // pontos turísticos
     float densidade1, densidade2; // densidade demográfica
     float percapita1, percapita2; // PIB per capita
 
     // Entrada de Dados
+    printf("Adicione os dados da carta 01!\n");
     printf("Digite qual Estado do País: \n");
     fgets(estado1, sizeof(estado1), stdin);
     estado1[strcspn(estado1, "\n")] = 0; // Remover o \n
 
-    printf("Digite Código: \n");
-    scanf("%d", &cod1);
+    printf("Digite Código da carta: \n");
+    scanf("%d", &carta1);
     getchar(); // Limpar o buffer (para garantir que a quebra de linha seja removida)
 
     printf("Digite qual nome da Cidade: \n");
@@ -36,15 +37,17 @@ int main() {
 
     printf("Quantos pontos turísticos: \n");
     scanf("%d", &turisticos1);
+    printf("Parabéns você adicionou carta 01!\n");
 
     getchar(); // Limpar o buffer antes de ler o estado2
 
+    printf("Agora adicione a carta 02!\n");
     printf("Digite qual Estado do País: \n"); 
     fgets(estado2, sizeof(estado2), stdin);
     estado2[strcspn(estado2, "\n")] = 0; // Remover o \n
 
-    printf("Digite Código: \n");
-    scanf("%d", &cod2);
+    printf("Digite Código da carta: \n");
+    scanf("%d", &carta2);
     getchar(); // Limpar o buffer novamente
 
     printf("Digite qual nome da Cidade: \n");
@@ -72,7 +75,7 @@ int main() {
     // Saída de Dados
     printf("\nDados da Cidade 1:\n");
     printf("Estado: %s\n", estado1);
-    printf("Código: %d\n", cod1);
+    printf("Código: %d\n", carta1);
     printf("Nome: %s\n", nome1);
     printf("População: %lu habitantes\n", populacao1);
     printf("Área: %.2f km²\n", area1);
@@ -83,7 +86,7 @@ int main() {
 
     printf("\nDados da Cidade 2:\n");
     printf("Estado: %s\n", estado2);
-    printf("Código: %d\n", cod2);
+    printf("Código: %d\n", carta2);
     printf("Nome: %s\n", nome2);
     printf("População: %lu habitantes\n", populacao2);
     printf("Área: %.2f km²\n", area2);
@@ -92,15 +95,15 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per capita: R$ %.2f\n", percapita2);
 
-    printf("\nComparando as cidades:\n");
+    printf("\nComparação de Cartas:\n");
 
     // Comparações e impressão do vencedor
-    printf("\nPopulação: %s\n", populacao1 > populacao2 ? nome1 : nome2);
-    printf("Área: %s\n", area1 > area2 ? nome1 : nome2);
-    printf("PIB: %s\n", pib1 > pib2 ? nome1 : nome2);
-    printf("Pontos Turísticos: %s\n", turisticos1 > turisticos2 ? nome1 : nome2);
-    printf("Densidade Populacional: %s\n", densidade1 < densidade2 ? nome1 : nome2); 
-    printf("PIB per capita: %s\n", percapita1 > percapita2 ? nome1 : nome2);
+    printf("\nPopulação: Carta %d venceu (%d)\n", populacao1 > populacao2 ? carta1 : carta2, populacao1 > populacao2 ? 1 : 0);
+    printf("Área: Carta %d venceu (%d)\n", area1 > area2 ? carta1 : carta2, area1 > area2 ? 1 : 0);
+    printf("PIB: Carta %d venceu (%d)\n", pib1 > pib2 ? carta1 : carta2, pib1 > pib2 ? 1 : 0);
+    printf("Pontos Turísticos: Carta %d venceu (%d)\n", turisticos1 > turisticos2 ? carta1 : carta2, turisticos1 > turisticos2 ? 1 : 0);
+    printf("Densidade Populacional: Carta %d venceu (%d)\n", densidade1 < densidade2 ? carta1 : carta2, densidade1 < densidade2 ? 1 : 0);
+    printf("PIB per Capita: Carta %d venceu (%d)\n", percapita1 > percapita2 ? carta1 : carta2, percapita1 > percapita2 ? 1 : 0);
 
     return 0;
 }
